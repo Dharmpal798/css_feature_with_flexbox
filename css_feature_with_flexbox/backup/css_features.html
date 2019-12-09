@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html lang="en">             
+
+<head> 
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Css Features</title>       
+ 
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/custom.css" rel="stylesheet">        
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<style> 
+
+section#footer {                   
+    /*margin-top: 30px;*/
+}
+
+.first-div + h1.head { 
+    margin-bottom: -10px;
+    margin-top: 30px;             
+}
+
+h1.head {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: capitalize; 
+}
+
+p.para_manages {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;    
+}
+    
+.first_phase {
+    min-height: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.first_phase .flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+}
+
+.first_phase .flex-container > div {
+  background-color: #f1f1f1;
+  width: auto; 
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.second_phase, .third_phase, .fourth_phase, .fifth_phase, .six_phase, .seventh_phase,
+.eight_phase, .nine_phase, .ten_phase, .eleven_phase, .twelve_phase, .thirteen_phase {                  
+  margin-bottom: 40px;
+}
+
+.second_phase .flex-container { 
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+}
+
+.second_phase .flex-container > div {                                  
+  background-color: #f1f1f1;
+  width: 100px;
+  line-height: 75px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.third_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+}
+
+.third_phase .flex-container > div {                                  
+  background-color: #f1f1f1;
+  width: 200px;
+  line-height: 150px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.fourth_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+}
+
+.fourth_phase .flex-container > div {                                                                   
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.fifth_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+/*    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: stretch;              
+    justify-content: space-between;
+    justify-content: space-around;*/
+    background-color: DodgerBlue;
+}
+
+.fifth_phase .flex-container > div {                                                                   
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}       
+
+.six_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: DodgerBlue;
+    height: 300px;
+}
+
+.six_phase .flex-container > div {                                                                   
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.seventh_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    background-color: DodgerBlue;
+    height: 600px; 
+}
+
+.seventh_phase .flex-container > div {                                                                   
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.eight_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+
+.eight_phase .flex-container > div {                                                                   
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.eight_phase .o1 {
+    order: 4;
+}
+
+.eight_phase .o2 {
+    order: 3;
+}
+
+.eight_phase .o3 {
+    order: 1;
+}
+
+.eight_phase .o4 {            
+    order: 2;
+}
+
+.nine_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+
+.nine_phase .flex-container > div {                                                                    
+    background-color: #f1f1f1;
+    /*width: 200px;*/
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.nine_phase .f1 {
+    flex-grow: 1;
+}
+
+.nine_phase .f2 {
+    flex-grow: 2;           
+}
+
+.nine_phase .f3 {
+   flex-grow: 1; 
+}
+
+.nine_phase .f4 {            
+    flex-grow: 3;
+}
+
+.ten_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+
+.ten_phase .flex-container > div {                                                                    
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.ten_phase .s1 {
+    flex-grow: 1;
+}
+
+.ten_phase .s2 {
+    flex-grow: 2;
+}
+
+.ten_phase .s3 {
+    flex-shrink: 2;
+}
+
+.ten_phase .s4 {            
+   flex-grow: 3;
+}
+
+.eleven_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+
+.eleven_phase .flex-container > div {                                                                    
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.eleven_phase .fb1 {            
+   
+}
+
+.eleven_phase .fb2 {            
+   
+}
+
+.eleven_phase .fb3 {            
+   flex-basis: 400px; 
+}
+
+.eleven_phase .fb4 {            
+   
+}
+
+.twelve_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+
+.twelve_phase .flex-container > div {                                                                    
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.twelve_phase .fs1 {            
+   
+}
+
+.twelve_phase .fs2 {            
+   
+}
+
+.twelve_phase .fs3 {            
+    flex: 0 0 300px;
+}
+
+.twelve_phase .fs4 {                                           
+   
+}
+
+.thirteen_phase .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: DodgerBlue;
+    height: 400px; 
+}
+
+.thirteen_phase .flex-container > div {                                                                  
+    background-color: #f1f1f1;
+    width: 200px;
+    line-height: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.thirteen_phase .fc1 {                                           
+   
+}
+
+.thirteen_phase .fc2 {                                           
+
+}
+
+.thirteen_phase .fc3 {                                           
+    align-self: center; 
+}
+
+.thirteen_phase .fc4 {                                           
+   
+}
+
+
+</style>
+
+</head>
+
+<body>          
+
+<!-- The order Property se start karna hai -->
+
+<!-- The align-content Property se start karna hai -->
+
+<!-- flexbox start Most Features -->                                 
+
+<!-- 1). flex-direction
+
+2). flex-wrap
+
+3). flex-flow
+
+4). justify-content
+
+5). align-items
+
+6). align-content -->
+
+<!-- flexbox end Most Features -->                                                
+
+<div class="first-div">
+    <div class="container">
+        <div class="row">
+           <div class="col-12 col-md-12">  
+               <nav class="navbar navbar-expand-md navbar-light"> 
+        <a href="#" class="navbar-brand"><img src="img/logo.png" alt="logo"></a> 
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span> 
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Become a Professional</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Login/Signup</a></li>           
+            </ul>
+        </div>
+    </nav>
+           </div>
+        </div>
+    </div>
+</div> 
+
+  <!-- Masthead -->
+<h1 class="head">Flex-Direction: Column</h1>
+
+<div class="first_phase">
+    <div class="flex-container">                     
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+    </div>
+</div> 
+
+<div class="clearfix"></div>                                        
+
+<h1 class="head">Flex-Direction: Row and Flex-Wrap: Nowrap</h1>
+<div class="second_phase">                    
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>  
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>  
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>   
+    </div>
+</div>
+
+<div class="clearfix"></div> 
+
+<h1 class="head">Flex-Wrap: Wrap and Flex-Wrap: Wrap-Reverse</h1>       
+<div class="third_phase">                              
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>  
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>  
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>   
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<h1 class="head">flex-flow: row wrap;</h1>     
+<p class="para_manages">The flex-flow property is a shorthand property for the flex-direction and the flex-wrap properties.</p>                                 
+<div class="fourth_phase">                                            
+    <div class="flex-container">                
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>  
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>  
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>   
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<h1 class="head">flex-flow: row wrap;</h1>     
+<p class="para_manages">The flex-flow property is a shorthand property for the flex-direction and the flex-wrap properties.</p>                                 
+<div class="fifth_phase">                                            
+    <div class="flex-container">                
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>  
+    </div>
+</div>
+
+<h1 class="head">align-items: center;</h1>     
+<p class="para_manages">
+    The "align-items: center;" aligns the flex items in the middle of the container:
+</p>                                  
+<div class="six_phase">                                            
+    <div class="flex-container">                
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>  
+    </div>
+
+    <div class="flex-container" style="align-items: baseline; justify-content: center;">                
+      <div><h1>1</h1></div>
+      <div><h2>2</h2></div>
+      <div><h4>3</h4></div>  
+      <div><h6>4</h6></div>  
+    </div>
+</div>
+
+<h1 class="head">align-content: property</h1>      
+<p class="para_manages">
+    The "align-content: space-between;" displays the flex lines with equal space between them. 
+</p>  
+<p class="para_manages">
+   Align-content working same as Justify-content Property. <br>
+</p>                                
+
+<h1 class="head">Perfect Centering :</h1>
+<p class="para_manages">Align-content working same as Justify-content Property both use sath me called Perfect Centering.</p>
+
+<div class="seventh_phase">                                             
+    <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+</div> 
+
+
+<h1 class="head">order Property</h1>      
+<p class="para_manages">
+    Use the order property to sort the flex items as you like. 
+</p>
+
+<div class="eight_phase">                                             
+    <div class="flex-container"> 
+    <div class="o1">1</div> 
+    <div class="o2">2</div>
+    <div class="o3">3</div>  
+    <div class="o4">4</div>
+</div>
+</div> 
+
+<h1 class="head">flex-grow Property</h1>      
+<p class="para_manages">
+    Make the third flex item grow eight times faster than the other flex items. 
+</p>
+
+<div class="nine_phase">                                             
+    <div class="flex-container"> 
+    <div class="f1">1</div> 
+    <div class="f2">2</div>
+    <div class="f3">3</div>  
+    <div class="f4">4</div>                                  
+</div>
+</div>
+
+<h1 class="head">flex-shrink Property</h1>      
+<p class="para_manages">
+    Do not let the third flex item shrink as much as the other flex items. 
+</p>
+
+<div class="ten_phase">                                             
+    <div class="flex-container"> 
+    <div class="s1">1</div> 
+    <div class="s2">2</div>
+    <div class="s3">3</div>  
+    <div class="s4">4</div>                                  
+</div>
+</div>
+
+<h1 class="head">flex-basis Property</h1>      
+<p class="para_manages">
+    Set the initial length of the third flex item to 200 pixels. 
+</p>
+
+<div class="eleven_phase">                                              
+    <div class="flex-container"> 
+    <div class="fb1">1</div> 
+    <div class="fb2">2</div>
+    <div class="fb3">3</div>  
+    <div class="fb4">4</div>                                  
+</div>
+</div>  
+
+<h1 class="head">flex Property</h1>      
+<p class="para_manages">
+    Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels.
+</p>
+
+<div class="twelve_phase">                                              
+    <div class="flex-container"> 
+    <div class="fs1">1</div> 
+    <div class="fs2">2</div>
+    <div class="fs3">3</div>  
+    <div class="fs4">4</div>                                  
+</div>
+</div>
+
+<h1 class="head">align-self Property</h1>       
+<p class="para_manages">
+    The "align-self: center;" aligns the selected flex item in the middle of the container.      
+</p> 
+
+<div class="thirteen_phase">                                              
+    <div class="flex-container"> 
+    <div class="fc1">1</div> 
+    <div class="fc2">2</div>
+    <div class="fc3">3</div>  
+    <div class="fc4">4</div>                                  
+</div>
+</div>
+
+  <!-- Footer -->
+
+  <section id="footer">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> </p>
+          <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Idice System</a></p> 
+        </div>
+        </hr>
+      </div>  
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+
+                    
+
+</body>
+
+</html>

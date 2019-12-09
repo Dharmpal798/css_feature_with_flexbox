@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">             
+
+<head> 
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> Css Menus Features </title>           
+ 
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/custom.css" rel="stylesheet">        
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<style>
+
+.model_manage_form form {
+    background: #fff;
+    padding: 35px;
+    position: relative;
+    border-radius: 20px 0px 20px 0px;  
+}
+
+.first_menus {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.62);
+    transition: 0.5s ease;     
+}
+
+.model_manage_form div.button_danger_manage {              
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.model_manage_form {             
+    padding-top: 100px;  
+}
+
+.sidebar_menu {              
+    /*background: #000;*/
+    /*padding: 10px 0;*/
+    /*max-width: 250px;*/
+}
+
+.sidebar_manage {   
+    background: #000;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%; 
+    bottom: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;  
+}
+
+button#sidebar_close {
+    display: block;
+    margin-left: auto;      
+}
+
+ul.sidebar-nav {
+    width: 100%;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+ul.sidebar-nav > li {
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    padding: 10px 22px;
+}
+
+ul.sidebar-nav > li > a {
+    color: #fff;
+    /*text-decoration: none;*/
+}
+
+</style>
+
+</head>
+
+<body>      
+
+<div class="sidebar_menu">                        
+    <button type="button" class="btn btn-primary sidebar_btns" id="sidebar_open"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="sidebar_manage">
+        <button type="button" class="btn btn-danger" id="sidebar_close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div id="wrapper" class="toggled">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav"> 
+                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
+                    <li> <a href="#">Dashboard</a> </li>
+                    <li> <a href="#">Shortcuts</a> </li>
+                    <li> <a href="#">Overview</a> </li>
+                    <li> <a href="#">Events</a> </li>
+                    <li> <a href="#">About</a> </li>
+                    <li> <a href="#">Services</a> </li>
+                    <li> <a href="#">Contact</a> </li>
+                </ul>
+            </div> <!-- /#sidebar-wrapper --> 
+            
+        </div>
+    </div>
+</div>
+
+                                            
+<div class="button_manage text-center mt-4"> 
+    <button type="button" class="btn btn-primary btn-lg" id="open_model">Click Here</button>
+</div> 
+
+
+<div class="first_menus">
+    <div class="container">  
+        
+        <div class="model_manage_form col-lg-6 m-auto"> 
+          <form action="" method="post"> 
+            <div class="button_danger_manage">         
+                <button type="button" class="btn btn-danger" id="close_model">Close</button>
+            </div>          
+            <h3 class="mb-4 mt-4 text-center">User Login</h3> 
+            <div class="form-group">
+              <label for="email">Email:</label> 
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    </div> 
+</div>
+
+  <!-- Footer -->
+  <script src="js/jquery.min.js"></script>       
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>     
+
+<script>
+  
+$(document).ready(function() {                                 
+    $('#open_model').click(function() {
+        $('.first_menus').show(1000);
+        $('.model_manage_form').fadeIn(1000);
+    });
+    $('#close_model').click(function() {
+        $('.first_menus').hide(1000);
+        $('.model_manage_form').fadeOut(1000);
+    });
+})
+
+</script> 
+
+<script>    
+  
+$(document).ready(function() { 
+    $('#sidebar_open').click(function() { 
+        $('.sidebar_manage').show();
+        $('.sidebar_manage').css({"width": "300px", "margin-left": "0"});
+        $('.sidebar_btns').css({"margin-left": "300px"});
+
+    });
+    $('#sidebar_close').click(function() {  
+        $('.sidebar_manage').css({"width": "0", "margin-left": "0"});  
+        $('.sidebar_btns').css({"margin-left": "0"});           
+    });
+});
+
+</script>
+
+</body>
+
+</html>
